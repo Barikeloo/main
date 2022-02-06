@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>My GitHub Page</title>
+</head>
+<body>
+    <div id="contenedor">
+        <div class="about">
+            <div class="about-container">
+                <div class="about-container-img">
+                    <img src="https://cdn.discordapp.com/attachments/939847214560329788/939880711291301898/perfil.png" class="about-container-img">
+                    <span class="usuario">Barikeloo#9927</span>
+                </div>
+            </div>
+            <div class="about-container">
+                <div class="about-container-message">
+                    Hello, I'm learning to coding. I love learning new things every day. I will study a web application development course in the next year. I hope to be a good developer and be able to work on it :). On this page you can find my projects and social networks.
+                </div>
+            </div>
+        </div>
+        <div class="skills">
+            <span class="titulo-skills">SKILLS</span>
+            <hr>
+            <div class="modulos">
+                <div class="html-skills">
+                    <div><i class="fab fa-html5"></i></div>
+                    <div class="progressHtml">
+                        <div class="progressBarHtml"></div>
+                    </div>
+                </div>
+                <div class="js-skills">
+                    <div><i class="fab fa-js-square"></i></div>
+                    <div class="progressJs">
+                        <div class="progressBarJs"></div>
+                    </div>
+                </div>
+                <div class="css-skills">
+                    <div><i class="fab fa-css3-alt"></i></div>
+                    <div class="progressCss">
+                        <div class="progressBarCss"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="social-media">
+            <span class="titulo-social">SOCIAL MEDIA</span>
+            <hr>
+            <div class="iconos-sociales">
+                <div class="github">
+                    <div><i class="fab fa-github" id="git-icon" onclick="location.href = 'https://github.com/Barikeloo/';"></i></div>
+                </div>
+                <div class="discord">
+                    <div><i class="fab fa-discord" id="discord-icon" onclick="location.href = 'https://discord.gg/RvjdShTqgA';"></i></div>                
+                </div>
+                <div class="instagram">
+                    <div><i class="fab fa-instagram" id="insta-icon" onclick="location.href = 'https://discord.gg/RvjdShTqgA';"></i></div>                 
+                </div>
+            </div>
+        </div>
+        <div class="projects">
+            <span class="titulo-proyectos">PROJECTS</span>
+            <hr>
+            <div class="bk-carhud">
+                <span class="titulo-proyecto">BK-CARHUD</span>
+                <span class="description-project">Fivem CarHud for FreshCommunity.</span>
+                <div class="btn-download">
+                    <div class="texto-download" onclick="location.href = 'https://github.com/Barikeloo/bk-CarHud';">DOWNLOAD</div>
+                </div>
+                <div class="btn-preview">
+                    <div class="texto-preview" onclick="location.href = 'https://streamable.com/1osgk7';">PREVIEW</div>
+                </div>
+            </div>
+            <div class="bk-carhud">
+                <span class="titulo-proyecto">JB-SPEEDOMETER</span>
+                <span class="description-project">5M Speedometer.</span>
+                <div class="btn-download">
+                    <div class="texto-download" onclick="location.href = 'https://github.com/Jaareet/jb-speedometer';">DOWNLOAD</div>
+                </div>
+                <div class="btn-preview">
+                    <div class="texto-preview" onclick="location.href = 'https://github.com/Jaareet/jb-speedometer';">PREVIEW</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="derechos">
+        <i class="far fa-copyright" id="copy-icon"></i>
+        <div class="info">Barikeloo#9927</div>
+    </div>
+</body>
+<script>
+    $(function () {
+    $("#git-icon").hover(function () {
+            $(".github").css(
+                {
+                    borderRadius: "100%"
+                }
+            )
+            
+        }, function () {
+            $(".github").css(
+                {
+                    borderRadius: ".4vw"
+                }
+            )
+        }
+    );
+    $("#discord-icon").hover(function () {
+        $(".discord").css(
+            {
+                borderRadius: "100%"
+            }
+        )
+        
+    }, function () {
+        $(".discord").css(
+            {
+                borderRadius: ".4vw"
+            }
+        )
+    });
+    $("#insta-icon").hover(function () {
+        $(".instagram").css(
+            {
+                borderRadius: "100%"
+            }
+        )
+        
+    }, function () {
+        $(".instagram").css(
+            {
+                borderRadius: ".4vw"
+            }
+        )
+    });
+});
+</script>
+<style>
+    body {
+    background-color: var(--body-BackColor);
+    overflow: hidden;
+}
+
+
+@font-face {
+    font-family: Rubik;
+    src: url(/Rubik-Medium.ttf);
+}
+
+* {
+    font-family: var(--about-FontClass);
+    font-size: var(--about-DefaultFontSize);
+    color: var(--about-DefaultFontTextColor);
+}
+
+:root {
+    --body-BackColor: rgb(187, 187, 187);
+    --about-FontClass: Rubik;
+    --about-DefaultFontSize: .8vw;
+    --about-DefaultFontTextColor: #fff;
+    --about-box-color: rgba(77, 77, 77, 0.315);
+    --about-message-color: rgba(122, 122, 122, 0.4);
+    --about-message-box-black-color: #000;
+    --about-box-blur-intensity: .21vw;
+    --about-message-box-blur-intensity: .15vw;
+    
+}
+
+[id="contenedor"] {
+    position: absolute;
+    padding: 1vw;
+    background-color: rgb(54, 54, 54);
+    width: 60vw;
+    height: 35vw;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: .7vw;
+    box-shadow: 0 0 .6vw black;
+    transition: .5s;
+}
+
+[class="about"] {
+    position: absolute;
+    top: 1.5vw;
+    left: 1.5vw;
+    padding: 1vw;
+    background-color: var(--about-box-color);
+    backdrop-filter: blur(var(--about-box-blur-intensity));
+    width: 38vw;
+    height: 13vw;
+    border-radius: .4vw;
+    transition: .5s;
+}
+
+[class="about-container"] {
+    display: inline-flex;
+    margin: .5vw;
+}
+
+[class="about-container-img"] {
+    position: absolute;
+    width: 10vw;
+    border-radius: .7vw;
+    transition: .5s;
+}
+[class="usuario"] {
+    font-size: 1.4vw;
+    position: absolute;
+    top: 10.5vw;
+    text-shadow: 0 0 .3vw #ccc;
+}
+
+[class="about-container-message"] {
+    position:absolute;
+    transform: translateY(-50%);
+    text-shadow: .1vw .1vw .1vw var(--about-message-box-black-color);
+    top: 50%;
+    right: 1.2vw;
+    width: 25vw;
+    padding: .5vw;
+    background-color: var(--about-message-color);
+    backdrop-filter: blur(var(--about-message-box-blur-intensity));
+    border-radius: .2vw;
+    transition: .5s;
+}
+[class="skills"] {
+    position: absolute;
+    width: 16vw;
+    height: 13vw;
+    background-color: var(--about-box-color);
+    backdrop-filter: blur(var(--about-box-blur-intensity));
+    top: 1.5vw;
+    right: 1.5vw;
+    padding: 1vw;
+    border-radius: .7vw;
+}
+[class="titulo-skills"] {
+    font-size: 1.2vw;
+}
+i {
+    font-size: 1.3vw;
+    transform: translateX(42%);
+}
+[class="html-skills"] {
+    margin-top: 1.2vw;
+}
+[class="progressHtml"] {
+    background-color: rgba(255, 255, 255, 0.178);
+    margin: .5vw;
+    max-width: 15vw;
+    max-height: .6vw;
+    border-radius: .4vw;
+}
+[class="progressBarHtml"] {
+    background-color: rgb(253, 253, 253);
+    width: 85%;
+    height: .6vw;
+    border-radius: .4vw;
+    box-shadow: 0 0 .5vw #ccc;
+}
+[class="js-skills"] {
+    margin-top: 1.2vw;
+}
+[class="progressJs"] {
+    background-color: rgba(255, 255, 255, 0.178);
+    margin: .5vw;
+    max-width: 15vw;
+    max-height: .6vw;
+    border-radius: .4vw;
+}
+[class="progressBarJs"] {
+    background-color: rgb(253, 253, 253);
+    width: 49%;
+    height: .6vw;
+    border-radius: .4vw;
+    box-shadow: 0 0 .5vw #ccc;
+}
+[class="css-skills"] {
+    margin-top: 1.2vw;
+}
+[class="progressCss"] {
+    background-color: rgba(255, 255, 255, 0.178);
+    margin: .5vw;
+    max-width: 15vw;
+    max-height: .6vw;
+    border-radius: .4vw;
+}
+[class="progressBarCss"] {
+    background-color: rgb(253, 253, 253);
+    width: 79%;
+    height: .6vw;
+    border-radius: .4vw;
+    box-shadow: 0 0 .5vw #ccc;
+}
+[class="social-media"] {
+    position: absolute;
+    background-color: var(--about-box-color);
+    backdrop-filter: blur(var(--about-box-blur-intensity));
+    width: 36vw;
+    height: 12vw;
+    padding: 2vw;
+    bottom: 2vw;
+    left: 1.5vw;
+    border-radius: .4vw;
+}
+[class="titulo-social"] {
+    font-size: 1.2vw;
+}
+[class="github"] {
+    display: inline-block;
+    margin-top: 1vw;
+    background-color: var(--about-box-color);
+    width: 8vw;
+    height: 8vw;
+    border-radius: .4vw;
+    margin-inline: 1.15vw;
+    transition: .7s;
+}
+[id="git-icon"] {
+    font-size: 4vw;
+    transform: translate(55%, 55%);
+    cursor: pointer;
+    transition: .5s;
+}
+[id="git-icon"]:hover {
+    text-shadow: 0 0 .4vw #ccc;
+}
+[class="discord"] {
+    display: inline-block;
+    margin-top: 1vw;
+    background-color: var(--about-box-color);
+    width: 8vw;
+    height: 8vw;
+    border-radius: .4vw;
+    margin-inline: 1.15vw;
+    transition: .7s;
+}
+[id="discord-icon"] {
+    font-size: 4vw;
+    transform: translate(30%, 55%);
+    cursor: pointer;
+    transition: .5s;
+}
+[id="discord-icon"]:hover {
+    text-shadow: 0 0 .4vw #ccc;
+}
+[class="instagram"] {
+    display: inline-block;
+    margin-top: 1vw;
+    background-color: var(--about-box-color);
+    width: 8vw;
+    height: 8vw;
+    border-radius: .4vw;
+    margin-inline: 1.15vw;
+    transition: .7s;
+}
+[id="insta-icon"] {
+    font-size: 4vw;
+    transform: translate(65%, 55%);
+    cursor: pointer;
+    transition: .5s;
+}
+[id="insta-icon"]:hover {
+    text-shadow: 0 0 .4vw #ccc;
+}
+[class="iconos-sociales"] {
+    transform: translate(6%, 5%);
+}
+[class="projects"] {
+    position: absolute;
+    width: 16vw;
+    height: 14vw;
+    background-color: var(--about-box-color);
+    backdrop-filter: blur(var(--about-box-blur-intensity));
+    bottom: 2vw;
+    right: 1.5vw;
+    padding: 1vw;
+    border-radius: .7vw;
+}
+[class="titulo-proyectos"] {
+    font-size: 1.2vw;
+}
+[class="bk-carhud"] {
+    padding: .6vw;
+    margin-top: .8vw;
+    background-color: var(--about-box-color);
+    backdrop-filter: blur(var(--about-box-blur-intensity));
+    width: 15vw;
+    height: 3.7vw;
+    border-radius: .4vw;
+}
+[class="titulo-proyecto"] {
+    font-size: .8vw;
+    text-shadow: 0 0 .4vw #ccc;
+}
+[class="description-project"] {
+    margin-top: .2vw;
+    display: block;
+}
+[class="btn-download"] {
+    display: inline-block;
+    background-color: var(--about-box-color);
+    backdrop-filter: blur(var(--about-box-blur-intensity));
+    margin-top: .3vw;
+    width: 5vw;
+    height: 1.5vw;
+    border-radius: .4vw;
+    transition: .3s;
+}
+[class="texto-download"] {
+    transform: translate(17%, 50%);
+    font-size: .6vw;
+    text-decoration: none;
+}
+[class="btn-download"]:hover{
+    text-shadow: 0 0 .4vw #ccc;
+    cursor: pointer;
+}
+[class="btn-preview"] {
+    display: inline-block;
+    background-color: var(--about-box-color);
+    backdrop-filter: blur(var(--about-box-blur-intensity));
+    margin-top: .3vw;
+    width: 5vw;
+    height: 1.5vw;
+    border-radius: .4vw;
+    margin-inline: .15vw;
+    transition: .3s;
+}
+[class="texto-preview"] {
+    transform: translate(25%, 50%);
+    font-size: .6vw;
+}
+[class="btn-preview"]:hover{
+    text-shadow: 0 0 .4vw #ccc;
+    cursor: pointer;
+}
+[class="info"] {
+    display: inline-block;
+    margin-inline: .9vw;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 .1vw rgb(0, 0, 0);
+} 
+[id="copy-icon"] {
+    font-size: .9vw;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 .1vw rgb(0, 0, 0);
+}
+[class="derechos"] {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    bottom: 2vw;
+    left: 50%;
+}
+@media only screen and (max-width: 390px) {
+    :root {
+        --about-DefaultFontSize: 1.2vw;
+    }
+    [id="contenedor"] {
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+    }
+    [class="about"] {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(2.2);
+        padding: 1vw;
+        background-color: var(--about-box-color);
+        backdrop-filter: blur(var(--about-box-blur-intensity));
+        width: 38vw;
+        height: 12vw;
+        border-radius: .4vw;
+    }
+}
+</style>
+</html>
